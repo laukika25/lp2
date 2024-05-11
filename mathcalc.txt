@@ -1,0 +1,43 @@
+public class Calculator {
+    public static void add(Decimal num1, Decimal num2) {
+        Decimal ans=num1+num2;
+        System.debug('Addition of num1+num2:'+ans);
+    }
+    public static void subtract(Decimal num1, Decimal num2) {
+        Decimal ans=num1-num2;
+        System.debug('Subtraction of num1-num2:'+ans);
+    }
+    public static void multiply(Decimal num1, Decimal num2) {
+        Decimal ans=num1*num2;
+        System.debug('Multiplication of num1*num2:'+ans);
+    }
+    public static void divide(Decimal num1, Decimal num2) {
+        if (num2 == 0) {
+            System.debug('Division by zero is not allowed.');
+        }
+        Decimal ans=num1/num2;
+        System.debug('Division of num1/num2:'+ans);
+    }
+	public static void exponentiation(Integer base, Integer exponent) {
+       Decimal ans=Math.pow(base,exponent);
+        System.debug('Exponentitation of num1**num2:'+ans);
+    }
+	public static void modulo(Integer num1, Integer moduloBy) {
+    	if (moduloBy == 0) {
+        	System.debug('Division by zero is not allowed.');
+    	}
+    	Integer ans= Math.mod(num1, moduloBy);
+        System.debug('Modulo of num1 % moduloBy:'+ans);
+       }
+    public static void square(Integer num) {
+        Decimal ans =num * num;
+        System.debug('Square of number is :'+ans);
+    }
+    public static void squareRoot(Decimal num) {
+        if (num < 0) {
+            System.debug('Square root of negative number is not allowed.');
+        }
+        Decimal ans= Math.sqrt(num);
+        System.debug('Square Root of num is:' +ans);
+    }
+}

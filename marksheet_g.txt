@@ -1,0 +1,28 @@
+public class StudetMarkSheet {
+  public static void generateMarkSheet(String studentName, Integer englishM, Integer mathM, Integer scienceM) {
+    Decimal totalM = mathM + englishM + scienceM;
+    Decimal percent = (totalM / 300) * 100;
+    String grade;
+    if (percent >= 90) {
+        grade = 'A+';
+    } else if (percent >= 80) {
+        grade = 'A';
+    } else if (percent >= 70) {
+        grade = 'B';
+    } else if (percent >= 60) {
+        grade = 'C';
+    } else if (percent >= 50) {
+        grade = 'D';
+    } else {
+        grade = 'F';
+    }
+    System.debug('Student Name: ' + studentName);
+    System.debug('English Marks: ' + englishM);
+    System.debug('Math Marks: ' + mathM);
+    System.debug('Science Marks: ' + scienceM);
+    System.debug('Total Marks Out of 300: ' + totalM);
+    System.debug('Percentage: ' + percent.setScale(2));
+    System.debug('Grade: ' + grade);
+}
+
+}

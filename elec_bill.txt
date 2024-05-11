@@ -1,0 +1,19 @@
+public class BillGenerator {
+    public static void generate(Integer unit){
+        Decimal BillAmount=0;
+        Decimal Rate1=5;
+        Decimal Rate2=7;
+        Decimal Rate3=10;
+        if(unit<=100){
+            BillAmount=Rate1*unit;
+        }
+        else if(unit<=200){
+            BillAmount=(100*Rate1)+((unit-100)*Rate2);
+        }
+        else{
+            BillAmount=(100*Rate1)+(100*Rate2)+((unit-200)*Rate3);
+        }
+        System.debug('Unit Consumed:' +unit);
+        System.debug('Bill Amount: '+BillAmount);
+    }
+}

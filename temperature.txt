@@ -1,0 +1,13 @@
+public class Temperature {
+    //Celsius to Fahrenheit =(Celcius * 9/5) + 32
+    //Fahrenheit to Celcius =(Fahrenheit - 32) * 5/9;
+    public static void CelsiusToFahrenheit(Decimal Celsius) {
+        Decimal ans = (Celsius * 9/5) + 32;
+        System.debug('Celsius: ' + Celsius + '°C = Fahrenheit: ' + ans + '°F');
+    }
+    
+    public static void FahrenheitToCelsius(Decimal Fahrenheit) {
+        Decimal ans = (Fahrenheit - 32) * 5/9;
+        System.debug('Fahrenheit: ' + Fahrenheit + '°F = Celsius: ' + ans + '°C');
+    }
+}

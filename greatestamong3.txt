@@ -1,0 +1,17 @@
+public class ThreeNumber {
+    public static void findGreatest(Decimal num1,Decimal num2,Decimal num3){
+        if (num1 == num2 && num2 == num3) {
+            System.debug('All numbers are equal.');
+        }
+        else{
+        Decimal ans=num1;
+        if(num2>ans){
+            ans=num2;
+        }
+        if(num3>ans){
+            ans=num3;
+        }
+        System.debug('Greatest among All three Numbers is : '+ans);
+        }
+    }  
+}
